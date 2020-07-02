@@ -1,0 +1,94 @@
+.list-logo {
+  font-family: Roboto;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  .item {
+    @extend %link;
+    position: relative;
+    display: block;
+
+    &:active .link,
+    &:hover .link {
+      color: $color-hover;
+    }
+  }
+
+  .link {
+    @extend %link;
+    color: $color-text-first;
+    transition: $transition;
+  }
+  & .current {
+    color: $color-hover;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0px;
+      left: 0px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $color-hover;
+      border-radius: 2px;
+    }
+  }
+
+  @media screen and (max-width: $tablet - 1px) {
+    font-size: 18px;
+    line-height: 1.17;
+
+    .item {
+      padding: 0;
+      margin: 0;
+
+      &:nth-child(1) {
+        padding-top: 60px;
+        padding-bottom: 8px;
+      }
+
+      &:nth-child(2) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
+      &:nth-child(3) {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+    }
+    .link {
+      padding: 0px;
+      margin: 0px;
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    @include font(14px, 1.15, 500);
+
+    & .item {
+      padding: 32px 0px 32px 0px;
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    .items {
+      margin-left: auto;
+      //   min-height: 100%;
+      //   padding: 32px 0px 32px 0px;
+
+      //   &:not(:last-child) {
+      //     margin-right: 50px;
+      //   }
+    }
+    // .link {
+    // padding: 32px 0px 32px 0px;
+    //     --color1: $color-text-second;
+    // --color4: $color-text-second:;
+    // }
+  }
+}

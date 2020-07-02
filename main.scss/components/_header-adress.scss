@@ -1,0 +1,56 @@
+.items {
+  @include font(18px, 1.17, 500);
+
+  margin-bottom: 60px;
+
+  & .icon {
+    margin-right: 10px;
+    --color1: #757575;
+    --color4: #757575;
+  }
+  & .link {
+    @extend %link;
+    color: $color-text-second;
+
+    &:hover {
+      color: $color-hover;
+    }
+    &:hover .icon {
+      --color1: #2196f3;
+      --color4: #2196f3;
+    }
+  }
+  @media screen and (max-width: $tablet - 1px) {
+    .item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    & {
+      @include font(12px, 1.15);
+    }
+    .item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    & {
+      @include font(14px, 1.15, 500);
+      display: flex;
+    }
+
+    & .item {
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+    .link {
+      padding: 32px 0px 32px 0px;
+    }
+  }
+}

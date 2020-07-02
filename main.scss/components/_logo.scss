@@ -1,0 +1,25 @@
+.header-logo {
+  display: inline-flex;
+  @extend %link;
+  @include logo;
+  .logo {
+    color: $color-hover;
+  }
+
+  .logo-black {
+    color: $color-logo;
+  }
+  .logo-white {
+    color: $color-text-white;
+  }
+
+  @media screen and (max-width: $tablet - 1px) {
+  }
+  @media screen and (min-width: $tablet) {
+
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include logo(24px, 1.17);
+  }
+}
