@@ -53,7 +53,7 @@ h2 {
   }
 }
 
-.page-header .site-nav, .process, .decision .list, .team, .team .container, .customers, .footer .container {
+.page-header .site-nav, .process, .decision .list, .team, .team .container, .customers, .footer-nav {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -69,7 +69,7 @@ h2 {
 }
 
 .page-header .menu-button, .items .link, .list-logo .item, .list-logo .link, .header-logo,
-.footer-logo, .process .list {
+.footer-logo, .process .list, .footer-nav .address {
   text-decoration: none;
   list-style: none;
   margin: 0;
@@ -245,7 +245,7 @@ h2 {
   font-size: 18px;
   line-height: 1.17;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 
 .items .icon {
@@ -279,7 +279,7 @@ h2 {
     font-size: 12px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
   }
   .items .item:not(:last-child) {
     margin-bottom: 10px;
@@ -292,7 +292,7 @@ h2 {
     font-size: 14px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -380,7 +380,7 @@ h2 {
     font-size: 14px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
   }
   .list-logo .item {
     padding: 32px 0px 32px 0px;
@@ -442,7 +442,6 @@ h2 {
 
 .footer-logo {
   color: #fff;
-  margin-bottom: 20px;
 }
 
 .hero {
@@ -901,6 +900,10 @@ h2 {
   cursor: pointer;
 }
 
+.social .point:not(:last-child) {
+  margin-right: 10px;
+}
+
 .social .item-link {
   width: 44px;
   height: 44px;
@@ -1009,12 +1012,169 @@ h2 {
   color: #fff;
 }
 
-.footer .container {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 60px;
-  padding-top: 60px;
-  width: 480px;
+.footer-nav .address {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-nav .adres {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-top: 20px;
+}
+
+.footer-nav .adres:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.footer-nav .adres p {
+  margin: 0 0 8px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-nav {
+    width: 480px;
+  }
+  .footer-nav {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    width: 480px;
+  }
+  .footer-nav .footer-address {
+    margin-bottom: 60px;
+  }
+  .footer-nav .join {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    width: 768px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-nav .adres {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    margin-top: 20px;
+  }
+  .footer-nav .adres p {
+    margin: 0 0 8px 0;
+  }
+  .footer-nav .join {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-nav {
+    width: 1200px;
+  }
+}
+
+.join {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.join .title {
+  margin: 0 0 20px 0;
+}
+
+.sign {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.sign .title {
+  margin: 0 0 20px 0;
+}
+
+.sign .signature {
+  width: 450px;
+  height: 50px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  padding: 12px 18px;
+  background-color: #2f303a;
+}
+
+@media screen and (min-width: 768px) {
+  .sign .signature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.sign .button {
+  display: inline-block;
+  position: relative;
+  padding: 10px 62px 10px 29px;
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.9;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.sign .button:active,
+.sign .button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.sign .icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
 }
 /*# sourceMappingURL=main.css.map */

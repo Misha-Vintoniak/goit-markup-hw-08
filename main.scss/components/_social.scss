@@ -3,7 +3,6 @@
   padding: 0px 32px 24px;
   justify-content: center;
 
-
   & .point {
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -16,6 +15,10 @@
       background-color: $color-hover;
       fill: $color-text-white;
       cursor: pointer;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
     }
   }
 
