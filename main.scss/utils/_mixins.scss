@@ -17,7 +17,6 @@
 }
 @mixin font($size: 18px, $line: 1.17, $weight: 500) {
   font-family: Roboto;
-
   font-size: $size;
   line-height: $line;
   font-weight: $weight;
