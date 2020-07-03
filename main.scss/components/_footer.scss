@@ -1,0 +1,10 @@
+.footer {
+  background-color: $background-footer;
+  color: $color-text-white;
+
+  .container {
+    @include container(60px);
+    @extend %position;
+    width: $mobile;
+  }
+}
