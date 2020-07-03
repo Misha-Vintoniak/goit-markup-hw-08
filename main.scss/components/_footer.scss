@@ -60,6 +60,16 @@
 
   @media screen and (min-width: $desktop) {
     width: $desktop;
+    text-align: left;
+    justify-content: space-between;
+
+    .footer-address {
+      margin-right: 69px;
+    }
+
+    .join {
+      margin: 0 94px 0 0;
+    }
   }
 }
 .join {
@@ -68,6 +78,9 @@
 
   & .title {
     margin: 0 0 20px 0;
+  }
+  .social {
+    padding: 0;
   }
 }
 .sign {
@@ -95,6 +108,11 @@
       display: flex;
       margin-left: auto;
       margin-right: auto;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 358px;
+      display: inline-block;
+      margin-right: 12px;
     }
   }
   & .button {

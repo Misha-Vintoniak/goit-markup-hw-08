@@ -1088,6 +1088,16 @@ h2 {
 @media screen and (min-width: 1200px) {
   .footer-nav {
     width: 1200px;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer-nav .footer-address {
+    margin-right: 69px;
+  }
+  .footer-nav .join {
+    margin: 0 94px 0 0;
   }
 }
 
@@ -1102,6 +1112,10 @@ h2 {
 
 .join .title {
   margin: 0 0 20px 0;
+}
+
+.join .social {
+  padding: 0;
 }
 
 .sign {
@@ -1143,6 +1157,14 @@ h2 {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sign .signature {
+    width: 358px;
+    display: inline-block;
+    margin-right: 12px;
   }
 }
 
