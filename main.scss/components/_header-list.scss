@@ -6,7 +6,6 @@
   .item {
     @extend %link;
     position: relative;
-    display: block;
 
     &:active .link,
     &:hover .link {
@@ -45,15 +44,14 @@
 
       &:nth-child(1) {
         padding-bottom: 8px;
-        display: inline-block;
       }
 
       &:nth-child(2) {
         padding-top: 40px;
-        padding-bottom: 20px;
+        padding-bottom: 8px;
       }
       &:nth-child(3) {
-        padding-top: 20px;
+        padding-top: 32px;
         padding-bottom: 60px;
       }
     }
