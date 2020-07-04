@@ -24,8 +24,8 @@
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   box-sizing: border-box;
 
   top: 50%;
@@ -70,4 +70,183 @@
   & .button {
     padding: 10px 52px;
   }
+}
+.form-caption {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  padding: 0px;
+
+  .form-field {
+    position: relative;
+    display: flex;
+    width: 370px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+
+    @include font(14px, 1.14, 400);
+    letter-spacing: 0.01em;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    &:last-child {
+      height: 120px;
+    }
+  }
+}
+
+.form-field {
+  .icon {
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    fill: $color-text-first;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover .icon {
+    fill: $color-hover;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:active .icon,
+  &:hover .icon {
+    fill: $color-hover;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form-input {
+    display: block;
+    width: 448px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 0px;
+    padding-left: 42px;
+    appearance: none;
+
+    &:active,
+    &:hover {
+      border: 1px solid $color-hover;
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  & .comment {
+    padding: 12px 16px;
+    resize: none;
+  }
+
+  .form-label {
+    position: absolute;
+    display: inline-block;
+    top: 0px;
+    left: 42px;
+    margin-bottom: 0;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    transform-origin: left;
+    transform: translate(0px, 12px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:active .form-label,
+  &:hover .form-label,
+  .form-input:not(:placeholder-shown) ~ .form-label {
+    color: $color-hover;
+    transform: translate(-26px, -20px);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.modal {
+  @media screen and (min-width: $desktop) {
+    & {
+      width: 528px;
+      height: 581px;
+    }
+    .form-field {
+      width: 448px;
+
+      &:last-child {
+        width: 448px;
+      }
+    }
+  }
+}
+.checkbox-container {
+  position: relative;
+  margin-bottom: 30px;
+  @include font(12px, 1.17, 400);
+  text-align: left;
+  white-space: nowrap;
+
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 1.7, 400);
+  }
+
+  .checkbox-text {
+    padding-left: 24px;
+    padding-bottom: 0px;
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 36px;
+    }
+  }
+  & a {
+    color: $color-hover;
+    list-style: none;
+  }
+  .icon-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    border: 2px solid $color-text-first;
+    border-radius: 2px;
+    transition: $transition;
+
+    @media screen and (min-width: $desktop) {
+      top: 5px;
+      left: 13px;
+    }
+  }
+
+  .checkbox-input {
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+  }
+}
+
+.checkbox-input:active ~ .icon-check,
+.checkbox-input:checked ~ .icon-check {
+  background-image: url(../img/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: $color-hover;
+  transition: background-image $time;
 }

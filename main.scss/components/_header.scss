@@ -25,8 +25,7 @@
 
   @media screen and (max-width: $tablet - 1px) {
     .site-nav {
-      display: flex;
-      max-width: $mobile;
+      width: $mobile;
       justify-content: space-between;
     }
 
@@ -37,11 +36,12 @@
     }
 
     .header-logo {
-      margin-right: 270px;
+      white-space: nowrap;
+      margin-right: 140px;
     }
     .menu-button {
       display: inline-flex;
-
+      padding-right: auto;
       background-color: transparent;
 
       &:active,

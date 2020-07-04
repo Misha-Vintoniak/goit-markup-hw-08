@@ -109,10 +109,7 @@ h2 {
 
 @media screen and (max-width: 767px) {
   .page-header .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 480px;
+    width: 480px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -130,12 +127,14 @@ h2 {
             align-items: center;
   }
   .page-header .header-logo {
-    margin-right: 270px;
+    white-space: nowrap;
+    margin-right: 140px;
   }
   .page-header .menu-button {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-right: auto;
     background-color: transparent;
   }
   .page-header .menu-button:active, .page-header .menu-button:hover {
@@ -584,8 +583,8 @@ h2 {
 
 .modal {
   position: absolute;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   top: 50%;
@@ -631,6 +630,216 @@ h2 {
 
 .modal .button {
   padding: 10px 52px;
+}
+
+.form-caption {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.input-container .form-field {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 370px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
+}
+
+.input-container .form-field:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.input-container .form-field:last-child {
+  height: 120px;
+}
+
+.form-field .icon {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+  fill: #212121;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover .icon {
+  fill: #2196f3;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:active .icon,
+.form-field:hover .icon {
+  fill: #2196f3;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field .form-input {
+  display: block;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 0px;
+  padding-left: 42px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.form-field .form-input:active, .form-field .form-input:hover {
+  border: 1px solid #2196f3;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field .comment {
+  padding: 12px 16px;
+  resize: none;
+}
+
+.form-field .form-label {
+  position: absolute;
+  display: inline-block;
+  top: 0px;
+  left: 42px;
+  margin-bottom: 0;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: translate(0px, 12px);
+          transform: translate(0px, 12px);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:active .form-label,
+.form-field:hover .form-label,
+.form-field .form-input:not(:placeholder-shown) ~ .form-label {
+  color: #2196f3;
+  -webkit-transform: translate(-26px, -20px);
+          transform: translate(-26px, -20px);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .modal .form-field {
+    width: 448px;
+  }
+  .modal .form-field:last-child {
+    width: 448px;
+  }
+}
+
+.checkbox-container {
+  position: relative;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 1.17;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-container {
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+  }
+}
+
+.checkbox-container .checkbox-text {
+  padding-left: 24px;
+  padding-bottom: 0px;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-container .checkbox-text {
+    padding-left: 36px;
+  }
+}
+
+.checkbox-container a {
+  color: #2196f3;
+  list-style: none;
+}
+
+.checkbox-container .icon-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-container .icon-check {
+    top: 5px;
+    left: 13px;
+  }
+}
+
+.checkbox-container .checkbox-input {
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+}
+
+.checkbox-input:active ~ .icon-check,
+.checkbox-input:checked ~ .icon-check {
+  background-image: url(../img/check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #2196f3;
+  -webkit-transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .process {
@@ -1020,6 +1229,8 @@ h2 {
 .footer {
   background-color: #2f303a;
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav .address {

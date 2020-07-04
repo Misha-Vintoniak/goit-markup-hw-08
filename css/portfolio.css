@@ -109,10 +109,7 @@ h2 {
 
 @media screen and (max-width: 767px) {
   .page-header .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 480px;
+    width: 480px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -130,12 +127,14 @@ h2 {
             align-items: center;
   }
   .page-header .header-logo {
-    margin-right: 270px;
+    white-space: nowrap;
+    margin-right: 140px;
   }
   .page-header .menu-button {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-right: auto;
     background-color: transparent;
   }
   .page-header .menu-button:active, .page-header .menu-button:hover {
@@ -724,6 +723,8 @@ h2 {
 .footer {
   background-color: #2f303a;
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-nav .address {

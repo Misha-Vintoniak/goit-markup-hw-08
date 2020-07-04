@@ -1,6 +1,8 @@
 .footer {
   background-color: $background-footer;
   color: $color-text-white;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer-nav {
   @extend %position;
