@@ -3,9 +3,6 @@
   padding: 0px 32px 24px;
   justify-content: center;
 
-  .icon {
-    fill: $icon;
-  }
   & .point {
     border-radius: 50%;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -32,5 +29,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+.point {
+  .icon {
+    fill: $icon;
+  }
+  &:hover .icon {
+    fill: $color-text-white;
+    cursor: pointer;
   }
 }
