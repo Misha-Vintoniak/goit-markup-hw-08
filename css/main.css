@@ -611,6 +611,9 @@ h2 {
     max-width: 450px;
     height: 634px;
   }
+  .modal .form-field {
+    max-width: 370px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -618,9 +621,16 @@ h2 {
     width: 528px;
     height: 581px;
   }
+  .modal .form-field {
+    width: 448px;
+  }
 }
 
-.modal .close-button {
+.modal .button {
+  padding: 10px 52px;
+}
+
+.close-button {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -641,7 +651,7 @@ h2 {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal .close-button:active, .modal .close-button:hover {
+.close-button:active, .close-button:hover {
   border: 1px solid #2196f3;
   fill: #2196f3;
   -webkit-transform: translate(25%, -25%) scale(1.2);
@@ -650,19 +660,16 @@ h2 {
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal .button {
-  padding: 10px 52px;
-}
-
 .form-caption {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 30px;
-  font-weight: 700;
+  font-family: Roboto;
   font-size: 20px;
   line-height: 1.15;
-  text-align: center;
+  font-weight: 700;
   letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .input-container {
@@ -670,12 +677,11 @@ h2 {
   padding: 0px;
 }
 
-.input-container .form-field {
+.form-field {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 370px;
   height: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -689,11 +695,11 @@ h2 {
   letter-spacing: 0.01em;
 }
 
-.input-container .form-field:not(:last-child) {
+.form-field:not(:last-child) {
   margin-bottom: 28px;
 }
 
-.input-container .form-field:last-child {
+.form-field:last-child {
   height: 120px;
 }
 
@@ -719,7 +725,7 @@ h2 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field .form-input {
+.form-input {
   display: block;
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -729,17 +735,6 @@ h2 {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-}
-
-.form-field .form-input:active, .form-field .form-input:hover {
-  border: 1px solid #2196f3;
-  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-field .comment {
-  padding: 12px 16px;
-  resize: none;
 }
 
 .form-field .form-label {
@@ -772,17 +767,9 @@ h2 {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-    height: 581px;
-  }
-  .modal .form-field {
-    width: 448px;
-  }
-  .modal .form-field:last-child {
-    width: 448px;
-  }
+.form-field .comment {
+  padding: 12px 16px;
+  resize: none;
 }
 
 .checkbox-container {
@@ -810,6 +797,8 @@ h2 {
 .checkbox-container .checkbox-text {
   padding-left: 24px;
   padding-bottom: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 1200px) {
