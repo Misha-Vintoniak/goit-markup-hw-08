@@ -16,7 +16,7 @@
   }
 
   @media screen and (max-width: $tablet - 1px) {
-    width: $mobile;
+    max-width: $mobile;
 .list {
     margin-bottom: 40px;
 
