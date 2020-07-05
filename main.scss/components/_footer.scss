@@ -38,7 +38,7 @@
     }
   }
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    max-width: $tablet;
 
     display: flex;
 
@@ -62,7 +62,7 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    width: $desktop;
+    max-width: $desktop;
     text-align: left;
     justify-content: space-between;
 
@@ -117,7 +117,7 @@
       width: 450px;
     }
     @media screen and (min-width: $desktop) {
-      width: 358px;
+      max-width: 358px;
       display: inline-block;
       margin-right: 12px;
     }

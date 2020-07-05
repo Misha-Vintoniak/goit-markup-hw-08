@@ -629,6 +629,7 @@ h2 {
 
 .modal .button {
   padding: 10px 52px;
+  text-align: center;
 }
 
 .close-button {
@@ -676,6 +677,13 @@ h2 {
 .input-container {
   margin-bottom: 20px;
   padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .form-field {
@@ -713,12 +721,6 @@ h2 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover .icon {
-  fill: #2196f3;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .form-field:active .icon,
 .form-field:hover .icon {
   fill: #2196f3;
@@ -726,7 +728,7 @@ h2 {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input {
+.form-field .form-input {
   display: block;
   width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -736,6 +738,12 @@ h2 {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+.form-field .form-input:active, .form-field .form-input:hover {
+  border: 1px solid #2196f3;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field .form-label {
@@ -805,6 +813,7 @@ h2 {
 @media screen and (min-width: 1200px) {
   .checkbox-container .checkbox-text {
     padding-left: 36px;
+    padding-bottom: 0;
   }
 }
 
@@ -1293,7 +1302,7 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .footer-nav {
-    width: 768px;
+    max-width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1328,7 +1337,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   .footer-nav {
-    width: 1200px;
+    max-width: 1200px;
     text-align: left;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1413,7 +1422,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   .sign .signature {
-    width: 358px;
+    max-width: 358px;
     display: inline-block;
     margin-right: 12px;
   }

@@ -775,7 +775,7 @@ h2 {
 
 @media screen and (min-width: 768px) {
   .footer-nav {
-    width: 768px;
+    max-width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -810,7 +810,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   .footer-nav {
-    width: 1200px;
+    max-width: 1200px;
     text-align: left;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -895,7 +895,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
   .sign .signature {
-    width: 358px;
+    max-width: 358px;
     display: inline-block;
     margin-right: 12px;
   }
