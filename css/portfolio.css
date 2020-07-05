@@ -733,7 +733,6 @@ h2 {
 }
 
 .footer-nav {
-  max-width: 480px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -763,6 +762,9 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  .footer-nav {
+    max-width: 480px;
+  }
   .footer-nav .footer-address {
     margin-bottom: 60px;
   }
@@ -777,10 +779,6 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   .footer-nav .adres {
     font-family: Roboto;
@@ -795,6 +793,18 @@ h2 {
   }
   .footer-nav .join {
     margin-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-nav .footer-address {
+    margin-right: 160px;
   }
 }
 
@@ -879,12 +889,13 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 450px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .sign .signature {
-    max-width: 358px;
+    width: 358px;
     display: inline-block;
     margin-right: 12px;
   }
