@@ -2,7 +2,6 @@ body {
   color: #212121;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
-  line-height: 1.2;
 }
 
 svg {
@@ -230,7 +229,7 @@ h2 {
     max-width: 1200px;
   }
   .page-header .list-logo {
-    margin-right: 290px;
+    margin-right: 275px;
   }
   .page-header .items {
     display: -webkit-box;
@@ -243,16 +242,13 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    white-space: nowrap;
     margin: 0px 0px 0px auto;
   }
 }
 
 .items {
-  font-family: Roboto;
-  font-size: 18px;
-  line-height: 1.17;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  white-space: nowrap;
 }
 
 .items .icon {
@@ -275,6 +271,12 @@ h2 {
 }
 
 @media screen and (max-width: 767px) {
+  .items .item {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1.17;
+    font-weight: 500;
+  }
   .items .item:not(:last-child) {
     margin-bottom: 16px;
   }
@@ -286,7 +288,6 @@ h2 {
     font-size: 12px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.03em;
   }
   .items .item:not(:last-child) {
     margin-bottom: 10px;
@@ -299,7 +300,6 @@ h2 {
     font-size: 14px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.03em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -385,7 +385,6 @@ h2 {
     font-size: 14px;
     line-height: 1.15;
     font-weight: 500;
-    letter-spacing: 0.03em;
   }
   .list-logo .item {
     padding: 32px 0px 32px 0px;
@@ -542,12 +541,17 @@ h2 {
   border: 1px solid transparent;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 118px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero .button:active, .hero .button:hover {
   background-color: #2196f3;
   color: #fff;
+}
+
+.hero > .button {
+  margin-bottom: 118px;
 }
 
 .backdrop {
@@ -630,6 +634,7 @@ h2 {
 .modal .button {
   padding: 10px 52px;
   text-align: center;
+  display: block;
 }
 
 .close-button {
@@ -670,7 +675,6 @@ h2 {
   font-size: 20px;
   line-height: 1.15;
   font-weight: 700;
-  letter-spacing: 0.03em;
   text-align: center;
 }
 
@@ -700,7 +704,6 @@ h2 {
   font-size: 14px;
   line-height: 1.14;
   font-weight: 400;
-  letter-spacing: 0.03em;
   letter-spacing: 0.01em;
 }
 
@@ -708,7 +711,7 @@ h2 {
   margin-bottom: 28px;
 }
 
-.form-field:last-child {
+.form-field:nth-child(4) {
   height: 120px;
 }
 
@@ -783,12 +786,10 @@ h2 {
 
 .checkbox-container {
   position: relative;
-  margin-bottom: 30px;
   font-family: Roboto;
   font-size: 12px;
   line-height: 1.17;
   font-weight: 400;
-  letter-spacing: 0.03em;
   text-align: left;
   white-space: nowrap;
 }
@@ -799,7 +800,6 @@ h2 {
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
-    letter-spacing: 0.03em;
   }
 }
 
@@ -1276,7 +1276,6 @@ h2 {
   font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
-  letter-spacing: 0.03em;
   margin-top: 20px;
 }
 
@@ -1312,7 +1311,6 @@ h2 {
     font-size: 14px;
     line-height: 1.7;
     font-weight: 400;
-    letter-spacing: 0.03em;
     margin-top: 20px;
   }
   .footer-nav .adres p {
@@ -1356,7 +1354,6 @@ h2 {
   font-size: 14px;
   line-height: 1.15;
   font-weight: 700;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -1373,7 +1370,6 @@ h2 {
   font-size: 14px;
   line-height: 1.15;
   font-weight: 700;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -1406,7 +1402,6 @@ h2 {
   font-size: 16px;
   line-height: 1.25;
   font-weight: 400;
-  letter-spacing: 0.03em;
   padding: 12px 18px;
   background-color: #2f303a;
 }
@@ -1440,7 +1435,6 @@ h2 {
   font-size: 16px;
   line-height: 1.9;
   font-weight: 700;
-  letter-spacing: 0.03em;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;

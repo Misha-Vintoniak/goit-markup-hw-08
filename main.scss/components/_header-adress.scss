@@ -1,8 +1,6 @@
 .items {
-  @include font(18px, 1.17, 500);
-
- 
-
+  white-space: nowrap;
+  
   & .icon {
     margin-right: 10px;
     --color1: #757575;
@@ -20,8 +18,10 @@
       --color4: #2196f3;
     }
   }
+
   @media screen and (max-width: $tablet - 1px) {
     .item {
+       @include font(18px, 1.17, 500);
       &:not(:last-child) {
         margin-bottom: 16px;
       }
@@ -29,7 +29,7 @@
   }
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
     & {
-      @include font(12px, 1.15);
+      @include font(12px, 1.15, 500);
     }
     .item:not(:last-child) {
       margin-bottom: 10px;

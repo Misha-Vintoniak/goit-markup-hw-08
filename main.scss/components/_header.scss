@@ -121,12 +121,13 @@
       max-width: $desktop;
     }
     .list-logo {
-      margin-right: 290px;
+      margin-right: 275px;
     }
     & .items {
       display: flex;
       flex-direction: row;
       align-items: center;
+      white-space: nowrap;
       margin: 0px 0px 0px auto;
     }
   }

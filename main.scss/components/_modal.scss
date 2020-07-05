@@ -66,6 +66,7 @@
   & .button {
     padding: 10px 52px;
     text-align: center;
+    display: block;
   }
 }
 .close-button {
@@ -129,8 +130,7 @@
   &:not(:last-child) {
     margin-bottom: 28px;
   }
-
-  &:last-child {
+  &:nth-child(4) {
     height: 120px;
   }
 
@@ -193,7 +193,7 @@
 }
 .checkbox-container {
   position: relative;
-  margin-bottom: 30px;
+
   @include font(12px, 1.17, 400);
   text-align: left;
   white-space: nowrap;

@@ -81,7 +81,7 @@
 
   @media screen and (min-width: $desktop) {
     .item-services {
-      width: 370px;
+      width: calc((100% - 90px) / 3);
     }
     .kontent {
       padding: 63px 24px;

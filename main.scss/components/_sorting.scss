@@ -30,7 +30,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    width: $tablet;
+    max-width: $tablet;
     .list {
       justify-content: center;
       margin-bottom: 30px;
@@ -43,7 +43,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    width: $desktop;
+    max-width: $desktop;
     @include container(93px);
 
     & .list {
