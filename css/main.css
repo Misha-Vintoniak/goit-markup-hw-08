@@ -109,7 +109,7 @@ h2 {
 
 @media screen and (max-width: 767px) {
   .page-header .site-nav {
-    max-width: 480px;
+    width: 480px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -128,7 +128,6 @@ h2 {
   }
   .page-header .header-logo {
     white-space: nowrap;
-    margin-right: 140px;
   }
   .page-header .menu-button {
     display: -webkit-inline-box;
@@ -564,6 +563,19 @@ h2 {
           transform: translate(0%, 0%) scale(1);
   -webkit-transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    padding: 208px 159px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -580,8 +592,6 @@ h2 {
 
 .modal {
   position: absolute;
-  width: 450px;
-  height: 609px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   top: 50%;
@@ -593,6 +603,21 @@ h2 {
   border-radius: 4px;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 100%;
+    max-width: 450px;
+    height: 634px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal .close-button {
@@ -890,7 +915,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .process .item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -1048,7 +1073,7 @@ h2 {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .team .item:not(:last-child) {
     margin-bottom: 30px;
   }

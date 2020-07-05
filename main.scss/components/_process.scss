@@ -27,7 +27,7 @@
   }
 
   .item {
-    @media screen and (min-width: $mobile) and (max-width: $tablet - 1px) {
+    @media screen and (max-width: $tablet - 1px) {
       &:not(:last-child) {
         margin-bottom: 30px;
       }
