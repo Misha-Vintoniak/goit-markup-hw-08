@@ -411,6 +411,7 @@ h2 {
   list-style: none;
   text-decoration: none;
   display: inline;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 767px) {

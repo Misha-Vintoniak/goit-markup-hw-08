@@ -3,6 +3,7 @@
   @extend %link;
   @include logo;
   display: inline;
+  white-space: nowrap;
 
   @media screen and (max-width: $tablet - 1px) {
     padding-top: 16px 0 16px 0;
