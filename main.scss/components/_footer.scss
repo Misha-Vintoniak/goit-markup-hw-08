@@ -1,11 +1,13 @@
 .footer {
   background-color: $background-footer;
   color: $color-text-white;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %position;
+  padding: 0px;
 }
 .footer-nav {
+  max-width: $mobile;
   @extend %position;
+  @include container(60px);
 
   .address {
     @extend%link;
@@ -24,14 +26,6 @@
     }
   }
   @media screen and (max-width: $tablet - 1px) {
-    width: $mobile;
-
-    & {
-      @include container(60px);
-
-      width: $mobile;
-    }
-
     .footer-address {
       margin-bottom: 60px;
     }
@@ -42,7 +36,7 @@
   }
   @media screen and (min-width: $tablet) {
     width: $tablet;
-    @include container(60px);
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -93,8 +87,7 @@
     margin: 0 0 20px 0;
   }
   .signature {
-    min-width: 350px;
-    max-width: 450px;
+    width: 100%;
     height: 50px;
     margin-bottom: 20px;
     display: flex;
@@ -116,7 +109,7 @@
       display: flex;
     }
     @media screen and (min-width: $desktop) {
-      width: 358px;
+      max-width: 358px;
       display: inline-block;
       margin-right: 12px;
     }
